@@ -2,7 +2,19 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/2742
+    static void Main(string[] args)
+    {
+        int input = int.Parse(Console.ReadLine().Split()[0]);
+
+        while (input > 0)
+        {
+            Console.WriteLine("{0}", input--);
+        }
+    }
+
     // https://www.acmicpc.net/problem/2741
+    /*
     static void Main(string[] args)
     {
         int input = int.Parse(Console.ReadLine().Split()[0]);
@@ -12,6 +24,7 @@ class Program
             Console.WriteLine("{0}", i);
         }
     }
+    */
 
     // https://www.acmicpc.net/problem/2839
     /*

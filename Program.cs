@@ -2,7 +2,20 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/11721
+    static void Main(string[] args)
+    {
+        string input = Console.ReadLine();
+        while (input.Length > 10)
+        {
+            Console.WriteLine(input.Substring(0, 10));
+            input = input.Remove(0, 10);
+        }
+        Console.WriteLine(input);
+    }
+
     // https://www.acmicpc.net/problem/11720
+    /*
     static void Main(string[] args)
     {
         int n = int.Parse(Console.ReadLine().Split()[0]);
@@ -16,6 +29,7 @@ class Program
 
         Console.WriteLine(total);
     }
+    */
 
     // https://www.acmicpc.net/problem/8393
     /*

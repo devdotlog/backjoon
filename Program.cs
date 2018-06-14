@@ -2,7 +2,74 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/1924
+    static void Main(string[] args)
+    {
+        string[] inputs = Console.ReadLine().Split();
+
+        int month = int.Parse(inputs[0]);
+        int days = int.Parse(inputs[1]);
+
+        for (int i = month - 1; i > 0; i--)
+        {
+            switch (i)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    days += 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    days += 30;
+                    break;
+                case 2:
+                    days += 28;
+                    break;
+            }
+        }
+
+        int remainder = days % 7;
+        switch (remainder)
+        {
+            case 0:
+                Console.WriteLine("SUN");
+                break;
+
+            case 1:
+                Console.WriteLine("MON");
+                break;
+
+            case 2:
+                Console.WriteLine("TUE");
+                break;
+
+            case 3:
+                Console.WriteLine("WED");
+                break;
+
+            case 4:
+                Console.WriteLine("THU");
+                break;
+
+            case 5:
+                Console.WriteLine("FRI");
+                break;
+
+            case 6:
+                Console.WriteLine("SAT");
+                break;
+        }
+    }
+
     // https://www.acmicpc.net/problem/2441
+    /*
     static void Main(string[] args)
     {
         int row = int.Parse(Console.ReadLine().Split()[0]);
@@ -22,6 +89,7 @@ class Program
             Console.WriteLine("");
         }
     }
+    */
 
     // https://www.acmicpc.net/problem/2440
     /*

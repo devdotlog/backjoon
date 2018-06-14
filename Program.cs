@@ -2,7 +2,23 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/11720
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine().Split()[0]);
+        string numbers = Console.ReadLine();
+
+        int total = 0;
+        for (int i = 0; i < n; i++)
+        {
+            total += int.Parse(numbers[i].ToString());    
+        }
+
+        Console.WriteLine(total);
+    }
+
     // https://www.acmicpc.net/problem/8393
+    /*
     static void Main(string[] args)
     {
         int n = int.Parse(Console.ReadLine().Split()[0]);
@@ -15,6 +31,7 @@ class Program
 
         Console.WriteLine(total);
     }
+    */
 
     // https://www.acmicpc.net/problem/1924
     /*

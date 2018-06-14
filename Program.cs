@@ -2,7 +2,36 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/2438
+    static void Main(string[] args)
+    {
+        int row = int.Parse(Console.ReadLine().Split()[0]);
+
+        for (int i = 1; i <= row; i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine("");
+        }
+    }
+
+    // https://www.acmicpc.net/problem/2739
+    /*
+    static void Main(string[] args)
+    {
+        int dan = int.Parse(Console.ReadLine().Split()[0]);
+
+        for (int i = 1; i <= 9; i++)
+        {
+            Console.WriteLine("{0} * {1} = {2}", dan, i, dan * i);
+        }
+    }
+    */
+
     // https://www.acmicpc.net/problem/2742
+    /*
     static void Main(string[] args)
     {
         int input = int.Parse(Console.ReadLine().Split()[0]);
@@ -12,6 +41,7 @@ class Program
             Console.WriteLine("{0}", input--);
         }
     }
+    */
 
     // https://www.acmicpc.net/problem/2741
     /*

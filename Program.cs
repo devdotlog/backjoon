@@ -1,8 +1,52 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class Program
 {
+    // https://www.acmicpc.net/problem/9498
+    private static void Main(string[] args)
+    {
+        var point = Convert.ToInt32(Console.ReadLine());
+
+        if (point >= 90 && point <= 100)
+        {
+            Console.WriteLine("A");
+        }
+        else if (point >= 80 && point <= 89)
+        {
+            Console.WriteLine("B");
+        }
+        else if (point >= 70 && point <= 79)
+        {
+            Console.WriteLine("C");
+        }
+        else if (point >= 60 && point <= 69)
+        {
+            Console.WriteLine("D");
+        }
+        else
+        {
+            Console.WriteLine("F");
+        }
+    }
+
+    // https://www.acmicpc.net/problem/15552
+    /*
+    private static void Main(string[] args)
+    {
+        var n = Convert.ToInt32(Console.ReadLine());
+
+        while (n-- > 0)
+        {
+            string[] inputs = Console.ReadLine().Split();
+            int output = Convert.ToInt32(inputs[0]) + Convert.ToInt32(inputs[1]);
+            Console.Write("{0}\n", output);
+        }
+    }
+    */
+
     // https://www.acmicpc.net/problem/11721
+    /*
     static void Main(string[] args)
     {
         string input = Console.ReadLine();
@@ -13,6 +57,7 @@ class Program
         }
         Console.WriteLine(input);
     }
+    */
 
     // https://www.acmicpc.net/problem/11720
     /*
@@ -160,14 +205,14 @@ class Program
     static void Main(string[] args)
     {
         int row = int.Parse(Console.ReadLine().Split()[0]);
-        
+
         for (int i = 0; i < row; i++)
         {
             for (int j = row - 1; j > i; j--)
             {
                 Console.Write(" ");
             }
-            
+
             for (int j = 0; j <= i; j++)
             {
                 Console.Write("*");

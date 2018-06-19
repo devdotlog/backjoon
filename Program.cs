@@ -1,9 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
 
 class Program
 {
+    // https://www.acmicpc.net/problem/10817
+    private static void Main(string[] args)
+    {
+        string[] inputs = Console.ReadLine().Split();
+
+        int[] buckets = new int[inputs.Length];
+        buckets[0] = Convert.ToInt32(inputs[0]);
+        buckets[1] = Convert.ToInt32(inputs[1]);
+        buckets[2] = Convert.ToInt32(inputs[2]);
+
+        if (buckets[0] > buckets[1])
+        {
+            Swap(ref buckets[0], ref buckets[1]);
+        }
+
+        if (buckets[0] > buckets[2])
+        {
+            Swap(ref buckets[0], ref buckets[2]);
+        }
+
+        if (buckets[1] > buckets[2])
+        {
+            Swap(ref buckets[1], ref buckets[2]);
+        }
+
+        Console.Write("{0}\n", buckets[1]);
+    }
+
+    private static void Swap(ref int a, ref int b)
+    {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
     // https://www.acmicpc.net/problem/9498
+    /*
     private static void Main(string[] args)
     {
         var point = Convert.ToInt32(Console.ReadLine());
@@ -29,6 +64,7 @@ class Program
             Console.WriteLine("F");
         }
     }
+    */
 
     // https://www.acmicpc.net/problem/15552
     /*

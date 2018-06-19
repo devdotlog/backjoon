@@ -2,7 +2,27 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/10871
+    private static void Main(string[] args)
+    {
+        string[] inputs = Console.ReadLine().Split();
+
+        int N = Convert.ToInt32(inputs[0]);
+        int X = Convert.ToInt32(inputs[1]);
+
+        string[] sequence = Console.ReadLine().Split();
+
+        for (int i = 0; i < N; i++)
+        {
+            if (X > Convert.ToInt32(sequence[i]))
+            {
+                Console.Write("{0} ", sequence[i]);
+            }
+        }
+    }
+
     // https://www.acmicpc.net/problem/10817
+    /*
     private static void Main(string[] args)
     {
         string[] inputs = Console.ReadLine().Split();
@@ -36,6 +56,7 @@ class Program
         a = b;
         b = temp;
     }
+    */
 
     // https://www.acmicpc.net/problem/9498
     /*

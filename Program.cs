@@ -2,7 +2,32 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/1546
+    private static void Main(string[] args)
+    {
+        int N = Convert.ToInt32(Console.ReadLine());
+        string[] inputs = Console.ReadLine().Split();
+
+        int[] points = new int[N];
+
+        for (int i = 0; i < inputs.Length; i++)
+        {
+            points[i] = Convert.ToInt32(inputs[i]);
+        }
+
+        Array.Sort(points);
+
+        decimal sum = 0;
+        for (int i = 0; i < N; i++)
+        {
+            sum += points[i];
+        }
+
+        Console.Write("{0:#.00}\n", Math.Round(sum * 100 / points[N - 1] / N, 2));
+    }
+    
     // https://www.acmicpc.net/problem/10871
+    /*
     private static void Main(string[] args)
     {
         string[] inputs = Console.ReadLine().Split();
@@ -20,6 +45,7 @@ class Program
             }
         }
     }
+    */
 
     // https://www.acmicpc.net/problem/10817
     /*

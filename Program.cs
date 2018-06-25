@@ -2,7 +2,40 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/4344
+    private static void Main(string[] args)
+    {
+        int C = Convert.ToInt32(Console.ReadLine());
+
+        for (var i = 0; i < C; i++)
+        {
+            string[] inputs = Console.ReadLine().Split();
+
+            int total = 0;
+            var student = Convert.ToInt32(inputs[0]);
+
+            for (var j = 1; j <= student; j++)
+            {
+                total += Convert.ToInt32(inputs[j]); 
+            }
+
+            int average = total / student;
+            int upper = 0;
+
+            for (var j = 1; j <= student; j++)
+            {
+                if (average < Convert.ToInt32(inputs[j]))
+                {
+                    upper++;
+                }
+            }
+
+            Console.Write("{0:#.000}\n", Math.Round((double)upper * 100 / student, 3));
+        }
+    }
+
     // https://www.acmicpc.net/problem/1546
+    /*
     private static void Main(string[] args)
     {
         int N = Convert.ToInt32(Console.ReadLine());
@@ -25,7 +58,8 @@ class Program
 
         Console.Write("{0:#.00}\n", Math.Round(sum * 100 / points[N - 1] / N, 2));
     }
-    
+    */
+
     // https://www.acmicpc.net/problem/10871
     /*
     private static void Main(string[] args)

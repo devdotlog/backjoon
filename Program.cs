@@ -2,7 +2,73 @@
 
 class Program
 {
+    // https://www.acmicpc.net/problem/1152
+    private static void Main(string[] args)
+    {
+        string input = Console.ReadLine().Trim();
+        if (input.Length == 0)
+        {
+            Console.WriteLine("0");
+        }
+        else
+        {
+            Console.WriteLine(input.Split().Length);   
+        }
+    }
+
+    // https://www.acmicpc.net/problem/2448
+    /*
+    private static void Main(string[] args)
+    {
+        int N = Convert.ToInt32(Console.ReadLine());
+        int cols = N / 3;
+        int maxRow = 5 * cols + cols;
+
+        for (var i = 0; i < N; i++)
+        {
+            int rest = i % 3;
+            switch (rest)
+            {
+                case 0:
+                    Zero(maxRow, i);
+                    break;
+                case 1:
+                    One(i);
+                    break;
+                case 2:
+                    Two(i);
+                    break;
+            }
+
+        }
+        Console.Write("***** ***** ***** ***** ***** ***** ***** *****\n");
+    }
+
+    private static void Zero(int maxRow, int col)
+    {
+        int cols = (maxRow - 1) / 2 - (col / 3 * 3);
+        for (var i = 0; i < cols; i++)
+        {
+            Console.Write(" ");
+        }
+
+        Console.Write("*\n");
+    }
+
+    private static void One(int col)
+    {
+        Console.WriteLine("O");
+    }
+
+    private static void Two(int col)
+    {
+        Console.WriteLine("T");
+
+    }
+    */
+
     // https://www.acmicpc.net/problem/4344
+    /*
     private static void Main(string[] args)
     {
         int C = Convert.ToInt32(Console.ReadLine());
@@ -33,6 +99,7 @@ class Program
             Console.Write("{0:#.000}\n", Math.Round((double)upper * 100 / student, 3));
         }
     }
+    */
 
     // https://www.acmicpc.net/problem/1546
     /*

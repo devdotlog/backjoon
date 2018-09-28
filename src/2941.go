@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	var alpabat string
+	var alpabats string
 
-	fmt.Scanf("%s", &alpabat)
+	fmt.Scanf("%s", &alpabats)
 
-	for i := 0; i < len(alpabat); i++ {
-		fmt.Println(string(alpabat[i]))
+	for i := 0; i < len(alpabats); i++ {
+		fmt.Println(string(alpabats[i]))
 	}
 }
